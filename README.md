@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shopee
+
+**E-commerce Project Using Next.js, Prisma, and MongoDB**
+
+## Introduction
+
+This project is an e-commerce web application developed with Next.js for the frontend, Prisma for database access, and MongoDB as the database. It serves as a starting point for building your e-commerce website.
+
+## Prerequisites
+
+- Node.js: Make sure you have Node.js installed. You can download it from [nodejs.org](https://nodejs.org/).
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the Repository**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone https://github.com/your-username/your-e-commerce-project.git
+   cd your-e-commerce-project
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install Dependencies**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+   Install project dependencies using npm or yarn:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-## Learn More
+3. **Configuration**
 
-To learn more about Next.js, take a look at the following resources:
+   - Create a `.env` file in the root directory based on the provided `.env.example`. Update your environment variables with your own configurations.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Database Setup**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   - Ensure you have MongoDB installed and running.
+   - Configure your database connection in `prisma/schema.prisma`:
 
-## Deploy on Vercel
+     ```prisma
+     generator client {
+       provider = "prisma-client-js"
+       output   = "./generated/client"
+     }
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+     datasource db {
+       provider = "mongodb"
+       url      = env("DATABASE_URL")
+     }
+     ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Migrate the Database**
+
+   Run Prisma migrations to create the necessary tables in MongoDB:
+
+   ```bash
+   npx prisma db push
+   ```
+
+6. **Starting the Development Server**
+
+   Start the Next.js development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+   Your e-commerce website should now be running at `http://localhost:3000`.
+
+## Project Structure
+
+- `/pages`: Next.js pages.
+- `/components`: Reusable React components.
+- `/api`: API routes for server-side logic.
+- `/prisma`: Prisma configuration and schema.
+
+## Features
+
+- User registration and authentication.
+- Product listing and details pages.
+- Cart functionality.
+- Checkout and payment processing (integration with payment gateways required).
+
+## Deployment
+
+This project is designed for local development. To deploy it in a production environment, you will need to set up a hosting service, configure environment variables, and ensure a secure MongoDB connection. 
+
+## Contributing
+
+Feel free to contribute to this project by opening issues or submitting pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/)
+- [Prisma](https://prisma.io/)
+- [MongoDB](https://www.mongodb.com/)
+
+Please note that this README file provides a high-level overview of setting up an e-commerce project. You will need to write code for various features like user authentication, product management, cart functionality, and payment processing. Additionally, you may want to include additional details and guidelines based on your project's specific requirements.

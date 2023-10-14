@@ -1,0 +1,14 @@
+.imageContainer {
+  height: 170px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  
+
+}
+
+.imageContainer img {
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
