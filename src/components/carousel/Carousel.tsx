@@ -5,7 +5,7 @@ import Link from "next/link";
 const Carousel = () => {
   return (
     <div>
-      <div className="carousel w-full">
+      <div className={`${styles.carousel } carousel w-full`}>
         <div
           id="slide1"
           className={`${styles.slideContainer} carousel-item relative w-full flex items-center justify-center `}
@@ -22,13 +22,15 @@ const Carousel = () => {
               Discover the collection as styled by fashion in our new season
               campaign.
             </p>
-            <Link href={"/product"} className="uppercase outline outline-2 max-w-fit text-center font-rubik py-5 px-10 mt-[90px] text-[13px] font-bold text-text-color hover:bg-text-color hover:text-white " >Shop Now</Link>
+            <Link href={"/product"} className="transition-all uppercase outline outline-2 max-w-fit text-center font-rubik py-5 px-10 mt-[90px] text-[13px] font-bold text-text-color hover:bg-text-color hover:text-white " >Shop Now</Link>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide4" className="btn btn-circle">
+          <a href="#slide1"  className={` ${styles.slideBtn} btn btn-circle  bg-white border-white shadow`} >
+
               ❮
             </a>
-            <a href="#slide2" className="btn btn-circle">
+            <a href="#slide2"  className={` ${styles.slideBtn} btn btn-circle  bg-white border-white shadow`}>
+
               ❯
             </a>
           </div>
@@ -41,13 +43,13 @@ const Carousel = () => {
               Discover the collection as styled by fashion in our new season
               campaign.
             </p>
-            <Link href={"/product"} className="uppercase outline outline-2 max-w-fit text-center font-rubik py-5 px-10 mt-[90px] text-[13px] font-bold text-text-color hover:bg-text-color hover:text-white " >Shop Now</Link>
+            <Link href={"/product"} className="transition-all uppercase outline outline-2 max-w-fit text-center font-rubik py-5 px-10 mt-[90px] text-[13px] font-bold text-text-color hover:bg-text-color hover:text-white " >Shop Now</Link>
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-            <a href="#slide1" className="btn btn-c ">
+            <a href="#slide1"  className={` ${styles.slideBtn} btn btn-circle  bg-white border-white shadow`} >
               ❮
             </a>
-            <a href="#slide3" className="btn btn-circle">
+            <a href="#slide2"  className={` ${styles.slideBtn} btn btn-circle  bg-white border-white shadow`}>
               ❯
             </a>
           </div>

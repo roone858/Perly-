@@ -1,3 +1,15 @@
-.slideContainer{
-     height: 100svh;
+
+
+.carousel{
+     height: 100vh;
+}
+.slideContainer .slideBtn {
+     transition: 0.5s;
+    opacity: 0;
+    
+}
+.slideContainer:hover .slideBtn {
+    opacity: 1;
+   
+ 
 }

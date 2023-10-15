@@ -9,9 +9,9 @@
   --red: #ee3333;
 }
 
-/* .dark {
+.dark {
   --bg: #0f172a;
-} */
+}
 body {
-
+background-color: #fff;
 }

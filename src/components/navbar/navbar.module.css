@@ -1,0 +1,12 @@
+.icon path,
+.icon circle {
+transition: 0.4s;
+}
+.icon:hover path,
+.icon:hover circle {
+  stroke: #ee3333;
+}
+.icon:hover {
+  cursor: pointer;
+}
+

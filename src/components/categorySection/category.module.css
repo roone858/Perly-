@@ -1,0 +1,18 @@
+.card span svg path {
+  stroke: var(--sub-text);
+}
+
+.card:hover span svg path {
+  stroke: var(--red);
+}
+.card:hover .shopNow {
+  color: var(--red);
+}
+
+.card:hover span  {
+  
+  margin-left: 5px;
+}
+.card:hover img {
+  transform: scale(1.07);
+}
