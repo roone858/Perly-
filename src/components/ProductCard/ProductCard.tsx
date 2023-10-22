@@ -4,44 +4,48 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./productCard.module.css";
 import { Product } from "@/types/typeStore";
+import OutlineStar from "../stars/OutlineStar";
+import OptionsIcons from "../optionsIcons/OptionsIcons";
 const ProductCard = ({ product }: { product: Product }) => {
   return (
     // <div className="flex flex-col items-center justify-between text-center max-w-xs">
-    <div className="p-4 max-w-[18rem] bg-white rounded-lg overflow-hidden  border relative border-gray-200 flex flex-col justify-between shadow">
-      <div>
+    <div
+    className={`${styles.card} transition-all duration-500  gap-4 pb-4 `}
+  >
+    <div className="aspect-square w-full relative overflow-hidden">
+      <Image
+        className="object-cover "
+        src={"/test-product.jpg"}
+        alt="product"
+        fill
+      />
+      <div className="absolute flex items-center justify-center w-full h-full text-black">
         <div
-          className="relative text-center"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
+          className={`${styles.optionsIcons} shadow bg-white p-4 py-2`}
         >
-          <div className={styles.imageContainer}>
-            <Image
-              className="w-full text-center"
-              src={product.image}
-              fill
-              alt="Product Image"
-            />
-          </div>
-          <div className="absolute top-0 right-0 bg-red-500 text-white px-2 py-1 m-2 rounded-md text-sm font-medium">
-            SALE
-          </div>
+          <OptionsIcons />
         </div>
-
-        <h3 className="text-lg font-medium mb-2">{product.title}</h3>
-        <p className="text-gray-600 text-sm mb-4">
-      {product?.description.length> 176 ? product.description.slice(0,173)+"...":product.description}
-        </p>
-      </div>
-      <div className="flex items-center justify-between relative  bottom-0 mt-auto">
-        <span className="font-bold text-lg">{product.price}$</span>
-        <Link href={"/products/"+product.id} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-          Buy Now
-        </Link>
       </div>
     </div>
+    <div className="text-text-color font-bold flex items-center justify-between pt-[20px] mb-[10px] ">
+      <div>
+        <span className="text-[16px] text-[#929292]  line-through mr-[6px]">
+          $102.47
+        </span>
+        <span className="text-[16px] text-[#ee3333]">$75.14</span>
+      </div>
+      <div className="flex items-center justify-end">
+        <OutlineStar />
+        <OutlineStar />
+        <OutlineStar />
+        <OutlineStar />
+        <OutlineStar />
+      </div>
+    </div>
+    <div className={` text-[14px]   text-black `}>
+      6. Variable With Soldout Product
+    </div>
+  </div>
     // </div>
   );
 };

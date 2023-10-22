@@ -7,11 +7,10 @@
   --text-color: #292929;
   --sub-text: #555555;
   --red: #ee3333;
+  background-color: #fff;
 }
 
-.dark {
-  --bg: #0f172a;
-}
+
 body {
 background-color: #fff;
 }
