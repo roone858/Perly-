@@ -1,7 +1,7 @@
 import React from "react";
-import ProductCard from "../ProductCard/ProductCard";
+import ProductCard from "../../ProductCard/ProductCard";
 import { Product } from "@/types/typeStore";
-import SectionHeader from "../sectionHeader/SectionHeader";
+import SectionHeader from "../../sectionHeader/SectionHeader";
 const product: Product = {
   id: "5",
   title: "Product One",

@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeader from "../sectionHeader/SectionHeader";
-import ProductCard from "../ProductCard/ProductCard";
+import SectionHeader from "../../sectionHeader/SectionHeader";
+import ProductCard from "../../ProductCard/ProductCard";
 
 const FeaturesSection = () => {
   return (

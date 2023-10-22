@@ -1,8 +1,7 @@
-import Link from "next/link";
+
 import React from "react";
-import Image from "next/image";
-import styles from "./category.module.css";
-import CategoryCard from "./categoryCard";
+import CategoryCard from "./CategoryCard";
+
 const CategorySection = () => {
   return (
     <div>
