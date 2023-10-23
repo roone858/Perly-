@@ -18,7 +18,8 @@ const PostCard = () => {
         </span>
         <h5 className="text-[#292929]">3 Ways My Style Has Evolved</h5>
         <span className="font-rubik text-red-color text-[12px] mb-[15px]  ">
-          Mahmoud Gamal Admin
+        <i className="fa-solid fa-user "></i>
+         {" "} Mahmoud Gamal Admin
         </span>
         <p className="text-[#707070]">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum eius
