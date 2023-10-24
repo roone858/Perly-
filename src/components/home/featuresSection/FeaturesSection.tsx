@@ -21,11 +21,11 @@ const FeaturesSection = () => {
           Women
         </button>
       </div>
-      <div className="grid grid-cols-12 gap-8 my-12">
+      <div className="grid grid-cols-8 gap-8 my-12">
         {[0, 1, 2, 3, 4, 5, 6, 7].map((item: number) => (
           <div
             key={item}
-            className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3"
+            className="col-span-8 sm:col-span-4 md:col-span-2 lg:col-span-2"
           >
             {" "}
             <ProductCard product={{}} />
